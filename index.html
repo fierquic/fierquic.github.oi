@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Valentine's Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            color: #d63384;
+            padding: 50px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff1493;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d63384;
+        }
+        a {
+            color: #ff1493;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day!</h1>
+    <p>Edit the link text below and click "Update" to customize your Valentine's link:</p>
+    <input type="text" id="linkText" value="Click here for your Valentine's surprise!" placeholder="Enter your link text">
+    <br>
+    <button onclick="updateLink()">Update Link</button>
+    <br>
+    <a id="valentineLink" href="https://www.example.com/valentines-surprise" target="_blank">Click here for your Valentine's surprise!</a>
+
+    <script>
+        function updateLink() {
+            const linkText = document.getElementById('linkText').value;
+            document.getElementById('valentineLink').textContent = linkText;
+        }
+    </script>
+</body>
+</html>
